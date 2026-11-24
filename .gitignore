@@ -1,0 +1,23 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Ảnh đĩa dung lượng lớn & gói nén dữ liệu kiểm thử (tránh vượt giới hạn 100 MB của GitHub)
+*.img
+*.vhd
+*.iso
+*.zip
+*.rar
+*.7z
+
+# Dữ liệu chạy thử tạm thời
+test_*/
+*.tmp
+
+# Trình soạn thảo & Hệ điều hành
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

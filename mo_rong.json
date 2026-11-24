@@ -1,0 +1,7 @@
+{
+ "tinh_huong": "ext-root",
+ "he_thong": "fat32",
+ "mo_ta": "Làm hỏng trường BPB_RootClus (offset 0x2C, 4 byte) ở cả Boot Sector chính (sector 0) và Backup Boot Sector (BPB_BkBootSec) để xóa liên kết tới thư mục gốc.",
+ "gia_tri_sai": 0,
+ "sua_ban_sao": true
+}
