@@ -1,0 +1,4 @@
+Ghi chu: kiem tra lai offset truoc khi sua anh.
+Thanh vien vang mat: khong.
+Noi dung: phan cong doc cau truc va viet chuong trinh.
+Ma kiem tra: 3C97C7F5

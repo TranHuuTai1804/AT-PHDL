@@ -1,0 +1,9 @@
+# Chuẩn hoá xuống dòng: luôn lưu LF trong repo (tránh diff cả tệp do CRLF trên Windows)
+* text=auto eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.img binary
+*.pdf binary
+*.jpg binary
+*.png binary

@@ -1,12 +1,34 @@
 {
- "ma_nhom": "N00",
+ "ma_nhom": "12345",
  "he_thong": "fat32",
  "thanh_vien": [
-  {"mssv": "", "ho_ten": "", "phu_trach": ""}
+  {
+   "mssv": "",
+   "ho_ten": "",
+   "phu_trach": "A — lõi fat32.py, info(), cộng điểm ext-root (case_ext, corrupt)"
+  },
+  {
+   "mssv": "21120089",
+   "ho_ten": "Trần Đăng Khoa",
+   "phu_trach": "B — case1() (TH1 sai tham số boot sector), đóng gói nộp"
+  },
+  {
+   "mssv": "",
+   "ho_ten": "",
+   "phu_trach": "C — case2() (TH2 sai directory entry)"
+  },
+  {
+   "mssv": "",
+   "ho_ten": "",
+   "phu_trach": "D — case3() (TH3 sai chuỗi FAT, ghép mảnh JPEG)"
+  }
  ],
  "cong_diem": {
   "repair": [],
-  "mo_rong": null
+  "mo_rong": {
+   "tinh_huong": "ext-root",
+   "dac_ta": "mo_rong.json"
+  }
  },
  "_huong_dan": "repair: danh sách tình huống có cài --repair, vd [1, 2]. mo_rong: null hoặc {\"tinh_huong\": \"ext-root|ext-size|ext-mbr\", \"dac_ta\": \"mo_rong.json\"}"
 }

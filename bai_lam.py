@@ -61,8 +61,10 @@ class BaiLam:
     # ------------------------------------------------------------- tình huống (B, C, D)
     def case1(self, img, out):
         """Tình huống 1 (Thành viên B) — sai tham số boot sector (SC, SB, SF).
-        Suy ra giá trị đúng, tạo ThamSo rồi gọi trich_xuat_tat_ca(img, ts, fat, out, self.log)."""
-        raise NotImplementedError("case1")
+        Suy ra giá trị đúng, tạo ThamSo rồi gọi trich_xuat_tat_ca(img, ts, fat, out, self.log).
+        Cài đặt chi tiết trong case1.py."""
+        from case1 import phuc_hoi_case1
+        phuc_hoi_case1(img, out, self.log)
 
     def case2(self, img, out):
         """Tình huống 2 (Thành viên C) — sai directory entry.

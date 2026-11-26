@@ -49,3 +49,19 @@ Khai báo trong `nhom.json`:
 
 * `repair`: danh sách tình huống có cài `--repair`. Ảnh sửa được kiểm tra bằng cách đọc lại toàn bộ tập tin và chạy `fsck` chế độ chỉ đọc.
 * `mo_rong`: một trong `ext-root`, `ext-size`, `ext-mbr`. `corrupt()` phải trả về danh sách vùng đã sửa, ví dụ `[{"offset": 61468, "length": 4, "cau_truc": "DIR_FileSize của A12.JPG"}]`; `recover.py` tự ghi danh sách này ra `<ảnh hỏng>.changes.json`. Mọi byte thay đổi phải nằm trong các vùng đã khai và không được chạm vùng dữ liệu tập tin. Sau đó `--case ext` sẽ được chạy trên ảnh nhóm tự làm hỏng và trên ảnh ẩn cùng tình huống.
+
+## Phân công mã nguồn (nhóm)
+
+| Tệp / hàm | Người viết | Nội dung |
+| --- | --- | --- |
+| `fat32.py`, `BaiLam.info()` | A | Lõi giải mã FAT32 dùng chung, `--info` |
+| `BaiLam.case_ext()`, `BaiLam.corrupt()`, `mo_rong.json` | A | Cộng điểm `ext-root` |
+| `case1.py`, `BaiLam.case1()` | B (Trần Đăng Khoa) | TH1 — suy ra SC/SB/SF từ chữ ký FAT, so khớp 2 bản FAT, '.'/'..' và độ dài chuỗi |
+| `BaiLam.case2()` | C | TH2 — ghép tên ↔ dữ liệu cho entry mất cluster đầu |
+| `BaiLam.case3()` | D | TH3 — ghép mảnh JPEG theo nội dung |
+
+Sản phẩm chạy trên ảnh nhóm: `recovered/case<N>/` (kèm `SHA256SUMS`) và nhật ký `logs/case<N>.log.jsonl`, tạo bằng:
+
+```
+python recover.py --image case1.img --case 1 --out recovered/case1 --log logs/case1.log.jsonl
+```

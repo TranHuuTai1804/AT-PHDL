@@ -1,0 +1,42 @@
+{"t": 0.045, "loai": "buoc", "msg": "Đọc chữ ký Boot Sector", "offset": "0x1fe", "gia_tri": "0xaa55"}
+{"t": 0.047, "loai": "buoc", "msg": "Đọc BPB_BytsPerSec", "offset": "0xb", "gia_tri": 512}
+{"t": 0.049, "loai": "buoc", "msg": "Đọc BPB_SecPerClus (SC, nghi sai)", "offset": "0xd", "gia_tri": 16}
+{"t": 0.051, "loai": "buoc", "msg": "Đọc BPB_RsvdSecCnt (SB, nghi sai)", "offset": "0xe", "gia_tri": 40}
+{"t": 0.053, "loai": "buoc", "msg": "Đọc BPB_NumFATs", "offset": "0x10", "gia_tri": 2}
+{"t": 0.055, "loai": "buoc", "msg": "Đọc BPB_Media", "offset": "0x15", "gia_tri": "0xf8"}
+{"t": 0.057, "loai": "buoc", "msg": "Đọc BPB_TotSec32", "offset": "0x20", "gia_tri": 1048572}
+{"t": 0.059, "loai": "buoc", "msg": "Đọc BPB_FATSz32 (SF, nghi sai)", "offset": "0x24", "gia_tri": 1037}
+{"t": 0.062, "loai": "buoc", "msg": "Đọc BPB_RootClus", "offset": "0x2c", "gia_tri": 2}
+{"t": 0.064, "loai": "buoc", "msg": "Đọc BPB_FSInfo", "offset": "0x30", "gia_tri": 1}
+{"t": 0.066, "loai": "buoc", "msg": "Đọc BPB_BkBootSec", "offset": "0x32", "gia_tri": 6}
+{"t": 0.067, "loai": "buoc", "msg": "So sánh sector 0 với Backup Boot Sector (sector 6)", "offset": "0xc00", "gia_tri": {"giong_het": true, "SC": 16, "SB": 40, "SF": 1037}}
+{"t": 0.069, "loai": "quyet_dinh", "msg": "Bản sao giống hệt bản chính nên không dùng để sửa được; phải suy ra SC/SB/SF từ cấu trúc khác"}
+{"t": 3.094, "loai": "buoc", "msg": "Quét các sector bắt đầu bằng chữ ký FAT[0]/FAT[1]", "gia_tri": {"so_vi_tri": 2, "sector": [32, 1056], "offset": ["0x4000", "0x84000"]}}
+{"t": 3.097, "loai": "buoc", "msg": "Hai bản FAT giống hệt nhau từng byte với SB=32, SF=1024", "offset": "0x4000", "gia_tri": {"fat0_offset": "0x4000", "fat1_offset": "0x84000", "so_byte": 524288}}
+{"t": 3.099, "loai": "quyet_dinh", "msg": "BPB_RsvdSecCnt đúng = 32: FAT#0 bắt đầu tại sector 32 (offset 0x4000)", "offset": "0xe", "gia_tri_ghi": 40, "gia_tri_dung": 32}
+{"t": 3.101, "loai": "quyet_dinh", "msg": "BPB_FATSz32 đúng = 1024: FAT#1 bắt đầu tại sector 1056 = 32 + 1024", "offset": "0x24", "gia_tri_ghi": 1037, "gia_tri_dung": 1024}
+{"t": 3.124, "loai": "buoc", "msg": "Thử SC=1: dữ liệu bắt đầu 0x104000, cluster 512 B", "offset": "0x104000", "gia_tri": {"diem": -1, "thu_muc_khop": [], "thu_muc_sai": [], "tap_tin_khop": 0, "tap_tin_sai": 0}}
+{"t": 3.128, "loai": "buoc", "msg": "Thử SC=2: dữ liệu bắt đầu 0x104000, cluster 1024 B", "offset": "0x104000", "gia_tri": {"diem": -1, "thu_muc_khop": [], "thu_muc_sai": [], "tap_tin_khop": 0, "tap_tin_sai": 0}}
+{"t": 3.131, "loai": "buoc", "msg": "Thử SC=4: dữ liệu bắt đầu 0x104000, cluster 2048 B", "offset": "0x104000", "gia_tri": {"diem": -1, "thu_muc_khop": [], "thu_muc_sai": [], "tap_tin_khop": 0, "tap_tin_sai": 0}}
+{"t": 3.135, "loai": "buoc", "msg": "Thử SC=8: dữ liệu bắt đầu 0x104000, cluster 4096 B", "offset": "0x104000", "gia_tri": {"diem": 150, "thu_muc_khop": [{"cluster": 3, "offset_dot": "0x105000"}], "thu_muc_sai": [], "tap_tin_khop": 5, "tap_tin_sai": 0}}
+{"t": 3.138, "loai": "buoc", "msg": "Thử SC=16: dữ liệu bắt đầu 0x104000, cluster 8192 B", "offset": "0x104000", "gia_tri": {"diem": -100, "thu_muc_khop": [], "thu_muc_sai": [3], "tap_tin_khop": 0, "tap_tin_sai": 0}}
+{"t": 3.14, "loai": "buoc", "msg": "Thử SC=32: dữ liệu bắt đầu 0x104000, cluster 16384 B", "offset": "0x104000", "gia_tri": {"diem": -100, "thu_muc_khop": [], "thu_muc_sai": [3], "tap_tin_khop": 0, "tap_tin_sai": 0}}
+{"t": 3.143, "loai": "buoc", "msg": "Thử SC=64: dữ liệu bắt đầu 0x104000, cluster 32768 B", "offset": "0x104000", "gia_tri": {"diem": -100, "thu_muc_khop": [], "thu_muc_sai": [3], "tap_tin_khop": 0, "tap_tin_sai": 0}}
+{"t": 3.145, "loai": "buoc", "msg": "Thử SC=128: dữ liệu bắt đầu 0x104000, cluster 65536 B", "offset": "0x104000", "gia_tri": {"diem": -100, "thu_muc_khop": [], "thu_muc_sai": [3], "tap_tin_khop": 0, "tap_tin_sai": 0}}
+{"t": 3.147, "loai": "quyet_dinh", "msg": "BPB_SecPerClus đúng = 8: thư mục con có '.'/'..' đúng vị trí và độ dài chuỗi FAT khớp kích thước", "offset": "0xd", "gia_tri_ghi": 16, "gia_tri_dung": 8}
+{"t": 3.15, "loai": "buoc", "msg": "Kiểm tra chéo: FAT đủ chỗ cho mọi cluster", "gia_tri": {"so_cluster": 130811, "sf_toi_thieu": 1022, "sf": 1024, "hop_le": true}}
+{"t": 3.152, "loai": "quyet_dinh", "msg": "Tổng kết TH1: các trường bị sai (giá trị ghi -> giá trị đúng)", "sai": {"sc": "16 -> 8", "sb": "40 -> 32", "sf": "1037 -> 1024"}, "data_offset": "0x104000", "cluster_size": 4096}
+{"t": 3.167, "loai": "buoc", "msg": "Đọc bảng FAT0", "offset": "0x4000", "gia_tri": {"so_muc": 130813, "FAT0": "0x0ffffff8", "FAT1": "0x0fffffff"}}
+{"t": 3.169, "loai": "buoc", "msg": "Đọc thư mục '/'", "offset": "0x104000", "gia_tri": {"cluster_dau": 2, "runs": [[2, 1]]}}
+{"t": 3.171, "loai": "buoc", "msg": "Phát hiện thư mục con 'DATA'", "offset": "0x104020", "gia_tri": {"cluster_dau": 3}}
+{"t": 3.172, "loai": "buoc", "msg": "Đọc thư mục 'DATA'", "offset": "0x105000", "gia_tri": {"cluster_dau": 3, "runs": [[3, 1]]}}
+{"t": 3.174, "loai": "buoc", "msg": "Phát hiện tập tin 'DATA/S19.JPG'", "offset": "0x105040", "gia_tri": {"size": 126865, "cluster_dau": 4, "runs": [[4, 31]]}}
+{"t": 3.175, "loai": "buoc", "msg": "Phát hiện tập tin 'DATA/V07.PNG'", "offset": "0x105060", "gia_tri": {"size": 247602, "cluster_dau": 35, "runs": [[35, 61]]}}
+{"t": 3.177, "loai": "buoc", "msg": "Phát hiện tập tin 'DATA/K71.PDF'", "offset": "0x105080", "gia_tri": {"size": 171748, "cluster_dau": 96, "runs": [[96, 42]]}}
+{"t": 3.179, "loai": "buoc", "msg": "Phát hiện tập tin 'DATA/U94.TXT'", "offset": "0x1050a0", "gia_tri": {"size": 153, "cluster_dau": 138, "runs": [[138, 1]]}}
+{"t": 3.18, "loai": "buoc", "msg": "Phát hiện tập tin 'DATA/Q65.JPG'", "offset": "0x1050c0", "gia_tri": {"size": 293248, "cluster_dau": 139, "runs": [[139, 72]]}}
+{"t": 3.221, "loai": "buoc", "msg": "Đã trích xuất 'DATA/S19.JPG'", "offset": "0x105040", "gia_tri": {"bytes_written": 126865}}
+{"t": 3.245, "loai": "buoc", "msg": "Đã trích xuất 'DATA/V07.PNG'", "offset": "0x105060", "gia_tri": {"bytes_written": 247602}}
+{"t": 3.266, "loai": "buoc", "msg": "Đã trích xuất 'DATA/K71.PDF'", "offset": "0x105080", "gia_tri": {"bytes_written": 171748}}
+{"t": 3.283, "loai": "buoc", "msg": "Đã trích xuất 'DATA/U94.TXT'", "offset": "0x1050a0", "gia_tri": {"bytes_written": 153}}
+{"t": 3.309, "loai": "buoc", "msg": "Đã trích xuất 'DATA/Q65.JPG'", "offset": "0x1050c0", "gia_tri": {"bytes_written": 293248}}
