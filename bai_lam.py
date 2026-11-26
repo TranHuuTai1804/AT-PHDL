@@ -10,6 +10,8 @@ Quy tắc:
 """
 from dataclasses import replace
 
+from case2 import phuc_hoi_case2
+
 from fat32 import (
     BOOT_SIGNATURE,
     FAT_MASK,
@@ -69,7 +71,7 @@ class BaiLam:
     def case2(self, img, out):
         """Tình huống 2 (Thành viên C) — sai directory entry.
         Tìm chuỗi mồ côi trong bảng FAT, ghép đúng tên với dữ liệu và lưu các tập tin."""
-        raise NotImplementedError("case2")
+        return phuc_hoi_case2(img, out, self.log)
 
     def case3(self, img, out):
         """Tình huống 3 (Thành viên D) — sai chuỗi vị trí.

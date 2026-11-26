@@ -57,7 +57,7 @@ Khai báo trong `nhom.json`:
 | `fat32.py`, `BaiLam.info()` | A | Lõi giải mã FAT32 dùng chung, `--info` |
 | `BaiLam.case_ext()`, `BaiLam.corrupt()`, `mo_rong.json` | A | Cộng điểm `ext-root` |
 | `case1.py`, `BaiLam.case1()` | B (Trần Đăng Khoa) | TH1 — suy ra SC/SB/SF từ chữ ký FAT, so khớp 2 bản FAT, '.'/'..' và độ dài chuỗi |
-| `BaiLam.case2()` | C | TH2 — ghép tên ↔ dữ liệu cho entry mất cluster đầu |
+| `case2.py`, `BaiLam.case2()` | C | TH2 — ghép tên ↔ dữ liệu cho entry mất cluster đầu |
 | `BaiLam.case3()` | D | TH3 — ghép mảnh JPEG theo nội dung |
 
 Sản phẩm chạy trên ảnh nhóm: `recovered/case<N>/` (kèm `SHA256SUMS`) và nhật ký `logs/case<N>.log.jsonl`, tạo bằng:
@@ -65,3 +65,18 @@ Sản phẩm chạy trên ảnh nhóm: `recovered/case<N>/` (kèm `SHA256SUMS`) 
 ```
 python recover.py --image case1.img --case 1 --out recovered/case1 --log logs/case1.log.jsonl
 ```
+
+## Phần Thành viên C — TH2
+
+`BaiLam.case2()` đã nối với `case2.py`: chẩn đoán cluster đầu sai, tìm chuỗi mồ côi, ghép một-một theo độ dài/chữ ký/dấu kết thúc và lưu tập tin kèm nhật ký. Lõi `fat32.py` của A được dùng lại. Hàm chỉ sửa ánh xạ trong bộ nhớ, giữ nguyên ảnh đầu vào.
+
+```powershell
+$env:PYTHONUTF8 = '1'
+python recover.py --image 'DUONG_DAN\case2.img' --case 2 --out ket_qua_th2 --log nhat_ky_th2.jsonl
+python -m unittest discover -s tests -v
+```
+
+- Hướng dẫn chạy, kiểm chứng và bàn giao: [docs/HuongDan_TH2.md](docs/HuongDan_TH2.md).
+- Chương báo cáo TH2 và giới hạn: [docs/BaoCao_ThanhVienC_TH2.md](docs/BaoCao_ThanhVienC_TH2.md).
+- Kiểm thử: 11 bài trong `tests/test_case2.py`; bộ mẫu FAT32 của giảng viên đạt `--info` 5/5, TH2 3/3 nội dung và đường dẫn. Ảnh TH2 trong `12345.rar` đã phục hồi ba entry, kiểm chứng định dạng thành công; chưa có hash gốc của gói 12345 để đối chiếu. Kết quả và nhật ký ở `test_teacher_20261126/results/`.
+- Chức năng TH2 không đọc các JSON đáp án. Tên thật và MSSV của thành viên C cần được nhóm điền vào `nhom.json` khi đóng gói.
