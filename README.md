@@ -58,7 +58,7 @@ Khai báo trong `nhom.json`:
 | `BaiLam.case_ext()`, `BaiLam.corrupt()`, `mo_rong.json` | A | Cộng điểm `ext-root` |
 | `case1.py`, `BaiLam.case1()` | B (Trần Đăng Khoa) | TH1 — suy ra SC/SB/SF từ chữ ký FAT, so khớp 2 bản FAT, '.'/'..' và độ dài chuỗi |
 | `case2.py`, `BaiLam.case2()` | C | TH2 — ghép tên ↔ dữ liệu cho entry mất cluster đầu |
-| `BaiLam.case3()` | D | TH3 — ghép mảnh JPEG theo nội dung |
+| `jpeg.py`, `case3.py`, `BaiLam.case3()` | D | TH3 — ghép hai mảnh, kiểm chứng entropy JPEG baseline |
 
 Sản phẩm chạy trên ảnh nhóm: `recovered/case<N>/` (kèm `SHA256SUMS`) và nhật ký `logs/case<N>.log.jsonl`, tạo bằng:
 
@@ -80,3 +80,20 @@ python -m unittest discover -s tests -v
 - Chương báo cáo TH2 và giới hạn: [docs/BaoCao_ThanhVienC_TH2.md](docs/BaoCao_ThanhVienC_TH2.md).
 - Kiểm thử: 11 bài trong `tests/test_case2.py`; bộ mẫu FAT32 của giảng viên đạt `--info` 5/5, TH2 3/3 nội dung và đường dẫn. Ảnh TH2 trong `12345.rar` đã phục hồi ba entry, kiểm chứng định dạng thành công; chưa có hash gốc của gói 12345 để đối chiếu. Kết quả và nhật ký ở `test_teacher_20261126/results/`.
 - Chức năng TH2 không đọc các JSON đáp án. Tên thật và MSSV của thành viên C cần được nhóm điền vào `nhom.json` khi đóng gói.
+
+## Phần Thành viên D — TH3
+
+`BaiLam.case3()` gọi `case3.phuc_hoi_case3()`. Chương trình đọc cluster đầu và kích thước từ entry, thử vị trí chia run đầu, tìm run thứ hai sau khe 1–64 cluster, loại vùng đã cấp phát và kiểm tra JPEG bằng `jpeg.py`. Chỉ xuất khi có duy nhất một cách ghép hợp lệ. Không đọc đáp án JSON, không sửa ảnh đầu vào, chỉ dùng thư viện chuẩn.
+
+```powershell
+$env:PYTHONUTF8 = '1'
+python recover.py --image 'DUONG_DAN\case3.img' --case 3 --out recovered/case3 --log logs/case3.log.jsonl
+python -m unittest discover -s tests -v
+```
+
+- Hướng dẫn và giới hạn: [docs/HuongDan_TH3.md](docs/HuongDan_TH3.md).
+- Chương báo cáo để ghép vào báo cáo chung: [docs/BaoCao_ThanhVienD_TH3.md](docs/BaoCao_ThanhVienD_TH3.md).
+- JPEG hỗ trợ: baseline 8-bit Huffman, grayscale/color, sampling, restart marker; giải mã toàn bộ luồng hệ số DC/AC, kiểm tra đủ MCU và EOI. Chưa hỗ trợ progressive/arithmetic và không tạo raster qua IDCT.
+- Kiểm thử TH3 dùng JPEG thật đã tạo sẵn trong `tests/fixtures/`; chạy test không cần Pillow. Pillow chỉ được dùng ngoài chương trình để sinh/kiểm chứng fixture.
+- Đã kiểm chứng TH3 trên bộ mẫu chính thức ngày 28/11/2026: mục tiêu `DATA/K09.JPG` đúng hash và đường dẫn (1/1); toàn bộ 5 tệp đúng hash, hai run `[[172, 33], [226, 38]]` khớp đáp án, thời gian 28,169 giây, ảnh nguồn không đổi. Minh chứng ở `test_teacher_th3_20261128/` (Git bỏ qua).
+- Đã chạy ảnh nhóm 12345: phục hồi `DATA/T01.JPG`, runs `[[168, 65], [254, 35]]`, 74,241 giây; JPEG giải mã được 791 x 791, ảnh nguồn không đổi. Gói nhóm không có hash gốc nên chưa khẳng định khớp bản gốc. Bộ bàn giao phần D ở `handoff/TH3_12345/`; chưa kiểm chứng ảnh ẩn.

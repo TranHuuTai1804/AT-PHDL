@@ -1,0 +1,54 @@
+{
+  "source": "test_group_th3_20261128\\12345\\fat32\\case3.img",
+  "source_sha256": "da300824c768c114d28f95eaf4a9716ab18700fcd4bc7b819fd19e6bfe16338b",
+  "source_unchanged": true,
+  "exit_code": 0,
+  "elapsed_seconds": 74.241,
+  "target": "DATA/T01.JPG",
+  "runs": [
+    [
+      168,
+      65
+    ],
+    [
+      254,
+      35
+    ]
+  ],
+  "target_sha256": "20274d2f59f566d0ff85a1d4aee43d97c2c8b2be36917fc436f901d61b3512b4",
+  "independent_decode": {
+    "format": "JPEG",
+    "size": [
+      791,
+      791
+    ]
+  },
+  "original_hash_available": false,
+  "files": [
+    {
+      "path": "DATA\\B73.TXT",
+      "size": 213,
+      "sha256": "bd0ae5a3afba0b7400d38768e7e7371ee800a7b068354e4b1d61ebfc9f000509"
+    },
+    {
+      "path": "DATA\\R90.JPG",
+      "size": 175869,
+      "sha256": "efce59b06406054883dee6f81f517cb3032786b80e4d112c746beca41552a816"
+    },
+    {
+      "path": "DATA\\T01.JPG",
+      "size": 408430,
+      "sha256": "20274d2f59f566d0ff85a1d4aee43d97c2c8b2be36917fc436f901d61b3512b4"
+    },
+    {
+      "path": "DATA\\U74.PNG",
+      "size": 274159,
+      "sha256": "4dd9ffa4bac62409dab41691dc10c2c4c7a256cded53a9745e39723e0e7a29d8"
+    },
+    {
+      "path": "DATA\\X44.PDF",
+      "size": 215523,
+      "sha256": "a6585c118e58efa724ed4ce48891022a52d54acad9edb092c192f0d3ebb3fe80"
+    }
+  ]
+}

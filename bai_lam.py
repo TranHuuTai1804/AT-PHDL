@@ -76,7 +76,8 @@ class BaiLam:
     def case3(self, img, out):
         """Tình huống 3 (Thành viên D) — sai chuỗi vị trí.
         Ghép mảnh tập tin JPEG theo nội dung và lưu tập tin mục tiêu."""
-        raise NotImplementedError("case3")
+        from case3 import phuc_hoi_case3
+        return phuc_hoi_case3(img, out, self.log)
 
     # --------------------------------------------------------------- cộng điểm (Thành viên A: ext-root)
     def case_ext(self, img, out):

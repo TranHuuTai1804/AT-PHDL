@@ -1,0 +1,118 @@
+{"t": 0.005, "loai": "buoc", "msg": "Đọc chữ ký Boot Sector (0x1FE)", "offset": "0x1fe", "gia_tri": "0xaa55"}
+{"t": 0.006, "loai": "buoc", "msg": "Đọc BPB_BytsPerSec", "offset": "0xb", "gia_tri": 512}
+{"t": 0.006, "loai": "buoc", "msg": "Đọc BPB_SecPerClus (SC)", "offset": "0xd", "gia_tri": 8}
+{"t": 0.006, "loai": "buoc", "msg": "Đọc BPB_RsvdSecCnt (SB)", "offset": "0xe", "gia_tri": 32}
+{"t": 0.007, "loai": "buoc", "msg": "Đọc BPB_NumFATs (NF)", "offset": "0x10", "gia_tri": 2}
+{"t": 0.007, "loai": "buoc", "msg": "Đọc BPB_TotSec32 (SV)", "offset": "0x20", "gia_tri": 1048572}
+{"t": 0.007, "loai": "buoc", "msg": "Đọc BPB_FATSz32 (SF)", "offset": "0x24", "gia_tri": 1024}
+{"t": 0.007, "loai": "buoc", "msg": "Đọc BPB_RootClus", "offset": "0x2c", "gia_tri": 2}
+{"t": 0.007, "loai": "buoc", "msg": "Đọc BPB_FSInfo", "offset": "0x30", "gia_tri": 1}
+{"t": 0.007, "loai": "buoc", "msg": "Đọc BPB_BkBootSec", "offset": "0x32", "gia_tri": 6}
+{"t": 0.007, "loai": "buoc", "msg": "Tính bố cục volume từ BPB", "offset": "0x104000", "gia_tri": {"cluster_size": 4096, "fat0_offset": "0x4000", "data_offset": "0x104000", "so_cluster": 130811}}
+{"t": 0.014, "loai": "buoc", "msg": "Đọc bảng FAT0", "offset": "0x4000", "gia_tri": {"so_muc": 130813, "FAT0": "0x0ffffff8", "FAT1": "0x0fffffff"}}
+{"t": 0.023, "loai": "buoc", "msg": "Đọc bảng FAT1", "offset": "0x84000", "gia_tri": {"so_muc": 130813, "FAT0": "0x0ffffff8", "FAT1": "0x0fffffff"}}
+{"t": 0.024, "loai": "buoc", "msg": "TH3: đọc thư mục /", "offset": "0x104000", "gia_tri": {"clusters": [2]}}
+{"t": 0.024, "loai": "buoc", "msg": "TH3: đọc thư mục DATA", "offset": "0x105000", "gia_tri": {"clusters": [3]}}
+{"t": 0.024, "loai": "buoc", "msg": "TH3: chẩn đoán chuỗi FAT bị xóa", "offset": "0x1050c0", "gia_tri": {"start": 168, "size": 408430, "cluster_size": 4096, "so_cluster_can": 100, "so_cluster_sau_dau": 99, "FAT_offsets": [17056, 541344], "FAT_values": [0, 0], "entry_hex": "001050C0  54 30 31 20 20 20 20 20 4A 50 47 20 00 00 4A 03  T01     JPG ..J.\n001050D0  57 5D 57 5D 00 00 4A 03 57 5D A8 00 6E 3B 06 00  W]W]..J.W]..n;.."}}
+{"t": 0.039, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1c0000", "gia_tri": {"first_len": 1, "second": 190, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 0.535, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1c1000", "gia_tri": {"first_len": 2, "second": 191, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 1.04, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1c2000", "gia_tri": {"first_len": 3, "second": 192, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 1.102, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1c3000", "gia_tri": {"first_len": 4, "second": 193, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 1.194, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1c4000", "gia_tri": {"first_len": 5, "second": 194, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 1.295, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1c5000", "gia_tri": {"first_len": 6, "second": 195, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 1.393, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1c6000", "gia_tri": {"first_len": 7, "second": 196, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 1.487, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1c7000", "gia_tri": {"first_len": 8, "second": 197, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 2.046, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1c8000", "gia_tri": {"first_len": 9, "second": 198, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 2.757, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1c9000", "gia_tri": {"first_len": 10, "second": 199, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 3.316, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1ca000", "gia_tri": {"first_len": 11, "second": 200, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 3.864, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1cb000", "gia_tri": {"first_len": 12, "second": 201, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 4.401, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1cc000", "gia_tri": {"first_len": 13, "second": 202, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 4.885, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1cd000", "gia_tri": {"first_len": 14, "second": 203, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 5.537, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1ce000", "gia_tri": {"first_len": 15, "second": 204, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 6.174, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1cf000", "gia_tri": {"first_len": 16, "second": 205, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 6.423, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1d0000", "gia_tri": {"first_len": 17, "second": 206, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 6.674, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1d1000", "gia_tri": {"first_len": 18, "second": 207, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 7.369, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1d2000", "gia_tri": {"first_len": 19, "second": 208, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 7.964, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1d3000", "gia_tri": {"first_len": 20, "second": 209, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 8.193, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1d4000", "gia_tri": {"first_len": 21, "second": 210, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 8.695, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1d5000", "gia_tri": {"first_len": 22, "second": 211, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 8.951, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1d6000", "gia_tri": {"first_len": 23, "second": 212, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 9.217, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1d7000", "gia_tri": {"first_len": 24, "second": 213, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 9.78, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1d8000", "gia_tri": {"first_len": 25, "second": 214, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 10.055, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1d9000", "gia_tri": {"first_len": 26, "second": 215, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 10.755, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1da000", "gia_tri": {"first_len": 27, "second": 216, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 11.187, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1db000", "gia_tri": {"first_len": 28, "second": 217, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 11.624, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1dc000", "gia_tri": {"first_len": 29, "second": 218, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 12.031, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1dd000", "gia_tri": {"first_len": 30, "second": 219, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 12.496, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1de000", "gia_tri": {"first_len": 31, "second": 220, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 12.943, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1df000", "gia_tri": {"first_len": 32, "second": 221, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 13.638, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1e0000", "gia_tri": {"first_len": 33, "second": 222, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 14.047, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1e1000", "gia_tri": {"first_len": 34, "second": 223, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 14.329, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1e2000", "gia_tri": {"first_len": 35, "second": 224, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 14.774, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1e3000", "gia_tri": {"first_len": 36, "second": 225, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 15.157, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1e4000", "gia_tri": {"first_len": 37, "second": 226, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 15.613, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1e5000", "gia_tri": {"first_len": 38, "second": 227, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 16.293, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1e6000", "gia_tri": {"first_len": 39, "second": 228, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 16.855, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1e7000", "gia_tri": {"first_len": 40, "second": 229, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 17.424, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1e8000", "gia_tri": {"first_len": 41, "second": 230, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 18.101, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1e9000", "gia_tri": {"first_len": 42, "second": 231, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 18.696, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1ea000", "gia_tri": {"first_len": 43, "second": 232, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 19.277, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1eb000", "gia_tri": {"first_len": 44, "second": 233, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 19.865, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1ec000", "gia_tri": {"first_len": 45, "second": 234, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 20.522, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1ed000", "gia_tri": {"first_len": 46, "second": 235, "gap": 21, "ly_do": "Marker xuất hiện trước khi giải mã đủ MCU"}}
+{"t": 21.148, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1ee000", "gia_tri": {"first_len": 47, "second": 236, "gap": 21, "ly_do": "Marker xuất hiện trước khi giải mã đủ MCU"}}
+{"t": 21.837, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1ef000", "gia_tri": {"first_len": 48, "second": 237, "gap": 21, "ly_do": "Marker xuất hiện trước khi giải mã đủ MCU"}}
+{"t": 22.609, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1f0000", "gia_tri": {"first_len": 49, "second": 238, "gap": 21, "ly_do": "Marker xuất hiện trước khi giải mã đủ MCU"}}
+{"t": 23.35, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1f1000", "gia_tri": {"first_len": 50, "second": 239, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 24.138, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1f2000", "gia_tri": {"first_len": 51, "second": 240, "gap": 21, "ly_do": "Marker xuất hiện trước khi giải mã đủ MCU"}}
+{"t": 24.9, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1f3000", "gia_tri": {"first_len": 52, "second": 241, "gap": 21, "ly_do": "Marker xuất hiện trước khi giải mã đủ MCU"}}
+{"t": 25.767, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1f4000", "gia_tri": {"first_len": 53, "second": 242, "gap": 21, "ly_do": "Marker xuất hiện trước khi giải mã đủ MCU"}}
+{"t": 26.632, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1f5000", "gia_tri": {"first_len": 54, "second": 243, "gap": 21, "ly_do": "Marker xuất hiện trước khi giải mã đủ MCU"}}
+{"t": 27.466, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1f6000", "gia_tri": {"first_len": 55, "second": 244, "gap": 21, "ly_do": "Marker xuất hiện trước khi giải mã đủ MCU"}}
+{"t": 28.406, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1f7000", "gia_tri": {"first_len": 56, "second": 245, "gap": 21, "ly_do": "ZRL vượt 64 hệ số"}}
+{"t": 29.174, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1f8000", "gia_tri": {"first_len": 57, "second": 246, "gap": 21, "ly_do": "Marker xuất hiện trước khi giải mã đủ MCU"}}
+{"t": 29.888, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1f9000", "gia_tri": {"first_len": 58, "second": 247, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 30.612, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1fa000", "gia_tri": {"first_len": 59, "second": 248, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 31.385, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1fb000", "gia_tri": {"first_len": 60, "second": 249, "gap": 21, "ly_do": "Marker xuất hiện trước khi giải mã đủ MCU"}}
+{"t": 32.276, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1fc000", "gia_tri": {"first_len": 61, "second": 250, "gap": 21, "ly_do": "Marker xuất hiện trước khi giải mã đủ MCU"}}
+{"t": 33.143, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1fd000", "gia_tri": {"first_len": 62, "second": 251, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 33.997, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1fe000", "gia_tri": {"first_len": 63, "second": 252, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 34.97, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x1ff000", "gia_tri": {"first_len": 64, "second": 253, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 36.464, "loai": "buoc", "msg": "TH3: ứng viên giải mã entropy đầy đủ", "offset": "0x200000", "gia_tri": {"runs": [[168, 65], [254, 35]], "jpeg": {"width": 791, "height": 791, "components": 3, "scans": 1, "mcus": 2500, "blocks": 15000, "entropy_decoded": true, "mode": "baseline", "eoi_offset": 408428}}}
+{"t": 37.415, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x201000", "gia_tri": {"first_len": 66, "second": 255, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 38.398, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x202000", "gia_tri": {"first_len": 67, "second": 256, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 39.746, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x203000", "gia_tri": {"first_len": 68, "second": 257, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 41.004, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x204000", "gia_tri": {"first_len": 69, "second": 258, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 42.017, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x205000", "gia_tri": {"first_len": 70, "second": 259, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 43.25, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x206000", "gia_tri": {"first_len": 71, "second": 260, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 44.546, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x207000", "gia_tri": {"first_len": 72, "second": 261, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 45.803, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x208000", "gia_tri": {"first_len": 73, "second": 262, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 47.258, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x209000", "gia_tri": {"first_len": 74, "second": 263, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 48.442, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x20a000", "gia_tri": {"first_len": 75, "second": 264, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 49.787, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x20b000", "gia_tri": {"first_len": 76, "second": 265, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 51.326, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x20c000", "gia_tri": {"first_len": 77, "second": 266, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 52.403, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x20d000", "gia_tri": {"first_len": 78, "second": 267, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 53.492, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x20e000", "gia_tri": {"first_len": 79, "second": 268, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 54.483, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x20f000", "gia_tri": {"first_len": 80, "second": 269, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 55.527, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x210000", "gia_tri": {"first_len": 81, "second": 270, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 56.451, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x211000", "gia_tri": {"first_len": 82, "second": 271, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 57.367, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x212000", "gia_tri": {"first_len": 83, "second": 272, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 58.277, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x213000", "gia_tri": {"first_len": 84, "second": 273, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 59.133, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x214000", "gia_tri": {"first_len": 85, "second": 274, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 60.074, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x215000", "gia_tri": {"first_len": 86, "second": 275, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 61.11, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x216000", "gia_tri": {"first_len": 87, "second": 276, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 62.045, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x217000", "gia_tri": {"first_len": 88, "second": 277, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 62.998, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x218000", "gia_tri": {"first_len": 89, "second": 278, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 64.0, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x219000", "gia_tri": {"first_len": 90, "second": 279, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 64.984, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x21a000", "gia_tri": {"first_len": 91, "second": 280, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 65.97, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x21b000", "gia_tri": {"first_len": 92, "second": 281, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 66.897, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x21c000", "gia_tri": {"first_len": 93, "second": 282, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 67.838, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x21d000", "gia_tri": {"first_len": 94, "second": 283, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 68.825, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x21e000", "gia_tri": {"first_len": 95, "second": 284, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 70.107, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x21f000", "gia_tri": {"first_len": 96, "second": 285, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 71.373, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x220000", "gia_tri": {"first_len": 97, "second": 286, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 72.816, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x221000", "gia_tri": {"first_len": 98, "second": 287, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 74.228, "loai": "buoc", "msg": "TH3: loại ứng viên JPEG", "offset": "0x222000", "gia_tri": {"first_len": 99, "second": 288, "gap": 21, "ly_do": "AC run vượt 64 hệ số"}}
+{"t": 74.228, "loai": "buoc", "msg": "TH3: tổng kết tìm kiếm", "gia_tri": {"so_cap": 6336, "qua_loc_EOI": 99, "so_nghiem": 1}}
+{"t": 74.229, "loai": "quyet_dinh", "msg": "TH3: chọn duy nhất hai mảnh JPEG", "offset": "0x1050c0", "path": "DATA/T01.JPG", "size": 408430, "clusters": [168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288], "runs": [[168, 65], [254, 35]], "sha256": "20274d2f59f566d0ff85a1d4aee43d97c2c8b2be36917fc436f901d61b3512b4", "jpeg": {"width": 791, "height": 791, "components": 3, "scans": 1, "mcus": 2500, "blocks": 15000, "entropy_decoded": true, "mode": "baseline", "eoi_offset": 408428}, "data_offsets": [1744896, 1748992, 1753088, 1757184, 1761280, 1765376, 1769472, 1773568, 1777664, 1781760, 1785856, 1789952, 1794048, 1798144, 1802240, 1806336, 1810432, 1814528, 1818624, 1822720, 1826816, 1830912, 1835008, 1839104, 1843200, 1847296, 1851392, 1855488, 1859584, 1863680, 1867776, 1871872, 1875968, 1880064, 1884160, 1888256, 1892352, 1896448, 1900544, 1904640, 1908736, 1912832, 1916928, 1921024, 1925120, 1929216, 1933312, 1937408, 1941504, 1945600, 1949696, 1953792, 1957888, 1961984, 1966080, 1970176, 1974272, 1978368, 1982464, 1986560, 1990656, 1994752, 1998848, 2002944, 2007040, 2097152, 2101248, 2105344, 2109440, 2113536, 2117632, 2121728, 2125824, 2129920, 2134016, 2138112, 2142208, 2146304, 2150400, 2154496, 2158592, 2162688, 2166784, 2170880, 2174976, 2179072, 2183168, 2187264, 2191360, 2195456, 2199552, 2203648, 2207744, 2211840, 2215936, 2220032, 2224128, 2228224, 2232320, 2236416], "ly_do": "Đủ kích thước, FAT=0 trên mọi bản, không đè tập tin/thư mục, giải mã đủ MCU và EOI đúng cuối"}
+{"t": 74.241, "loai": "quyet_dinh", "msg": "TH3: hoàn tất phục hồi", "so_tap_tin": 5, "path": "DATA/T01.JPG", "size": 408430, "clusters": [168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288], "runs": [[168, 65], [254, 35]], "sha256": "20274d2f59f566d0ff85a1d4aee43d97c2c8b2be36917fc436f901d61b3512b4", "jpeg": {"width": 791, "height": 791, "components": 3, "scans": 1, "mcus": 2500, "blocks": 15000, "entropy_decoded": true, "mode": "baseline", "eoi_offset": 408428}, "data_offsets": [1744896, 1748992, 1753088, 1757184, 1761280, 1765376, 1769472, 1773568, 1777664, 1781760, 1785856, 1789952, 1794048, 1798144, 1802240, 1806336, 1810432, 1814528, 1818624, 1822720, 1826816, 1830912, 1835008, 1839104, 1843200, 1847296, 1851392, 1855488, 1859584, 1863680, 1867776, 1871872, 1875968, 1880064, 1884160, 1888256, 1892352, 1896448, 1900544, 1904640, 1908736, 1912832, 1916928, 1921024, 1925120, 1929216, 1933312, 1937408, 1941504, 1945600, 1949696, 1953792, 1957888, 1961984, 1966080, 1970176, 1974272, 1978368, 1982464, 1986560, 1990656, 1994752, 1998848, 2002944, 2007040, 2097152, 2101248, 2105344, 2109440, 2113536, 2117632, 2121728, 2125824, 2129920, 2134016, 2138112, 2142208, 2146304, 2150400, 2154496, 2158592, 2162688, 2166784, 2170880, 2174976, 2179072, 2183168, 2187264, 2191360, 2195456, 2199552, 2203648, 2207744, 2211840, 2215936, 2220032, 2224128, 2228224, 2232320, 2236416]}

@@ -1,0 +1,4 @@
+05_first_run_tail | disk offset 0x1eafe0
+
+001EAFE0  4D 68 AE F5 D3 5B 3D 34 B5 F4 B7 46 FE 7B E9 4B  Mh...[=4...F.{.K
+001EAFF0  7D 6B 3E AC 2D 27 8A 4B E8 5E F1 01 71 27 96 F2  }k>.-'.K.^..q'..
